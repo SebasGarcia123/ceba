@@ -38,6 +38,30 @@ public class TipoUsuario {
         this.nombreTipoUsuario = nombreTipoUsuario;
         this.usuarios = usuarios;
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombreTipoUsuario() {
+        return nombreTipoUsuario;
+    }
+
+    public void setNombreTipoUsuario(String nombreTipoUsuario) {
+        this.nombreTipoUsuario = nombreTipoUsuario;
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
     
     
 }

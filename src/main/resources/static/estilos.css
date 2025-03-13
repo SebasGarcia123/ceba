@@ -1,0 +1,39 @@
+
+.login{
+    width: 500px;
+    display: inline-block;
+    border: 2px solid #3f7d20;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 60px;
+    margin-left: 30%;
+    background-color: rgb(245, 245, 245,0.8);
+
+}
+
+.login p{
+    font-size: 40px;
+    color: #454955;
+    font-weight: bolder;
+}
+
+.cabecero{
+    position: relative;
+    background-color: #6bb10af1;
+}
+
+.cabecero img{
+    width: 350px;
+}
+
+.imagenDeFondo{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-top: 0px;
+    overflow: hidden;
+}
