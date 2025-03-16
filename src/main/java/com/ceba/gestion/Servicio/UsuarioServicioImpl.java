@@ -39,7 +39,7 @@ public class UsuarioServicioImpl implements UsuarioServicio{
     }
 
     @Override
-    public Usuario obtenerUsuarioPorUsuario(String nombre) {
+    public Usuario obtenerUsuarioPorNombreUsuario(String nombre) {
         return repositorio.findByNombreUsuario(nombre);
     }
     

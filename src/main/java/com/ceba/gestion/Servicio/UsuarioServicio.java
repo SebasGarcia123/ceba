@@ -16,5 +16,5 @@ public interface UsuarioServicio {
     
     public void eliminarUsuario(Long id);
     
-    public Usuario obtenerUsuarioPorUsuario(String nombre);
+    public Usuario obtenerUsuarioPorNombreUsuario(String nombre);
 }

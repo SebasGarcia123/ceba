@@ -1,4 +1,13 @@
 
+html{
+    height: auto;
+    min-height: 100%;
+}
+
+body{
+    background: radial-gradient(#E3DAC9,#6bb10af1);
+}
+
 .login{
     width: 500px;
     display: inline-block;
@@ -6,7 +15,7 @@
     border-radius: 15px;
     padding: 30px;
     margin-top: 60px;
-    margin-left: 30%;
+    margin-left: 33%;
     background-color: rgb(245, 245, 245,0.8);
 
 }
@@ -18,7 +27,6 @@
 }
 
 .cabecero{
-    position: relative;
     background-color: #6bb10af1;
 }
 
@@ -26,7 +34,7 @@
     width: 350px;
 }
 
-.imagenDeFondo{
+/*.imagenDeFondo{
     position: absolute;
     left: 0;
     z-index: -1;
@@ -36,4 +44,4 @@
     background-position: center;
     margin-top: 0px;
     overflow: hidden;
-}
+}*/

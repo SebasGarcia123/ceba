@@ -74,6 +74,11 @@ public class Usuario {
     public void setTipoUsuario(TipoUsuario tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "idUsuario=" + idUsuario + ", nombreUsuario=" + nombreUsuario + ", pass=" + pass + ", tipoUsuario=" + tipoUsuario + '}';
+    }
     
     
 }
