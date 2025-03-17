@@ -29,9 +29,9 @@ public class ControladorUsuario {
     
     @PostMapping("/login")
     public String validarUsuario(@ModelAttribute("user") Usuario usuario, Model modelo, RedirectAttributes redirectAttributes){
-        Usuario usuarioBD = new Usuario();
-        usuarioBD = servicio.obtenerUsuarioPorNombreUsuario(usuario.getNombreUsuario());
-        //System.out.println(usuarioBD.toString());
+        Usuario usuarioBD = servicio.obtenerUsuarioPorNombreUsuario(usuario.getNombreUsuario());
+        System.out.println(usuario.toString());
+        System.out.println(usuario.toString());
         if (usuarioBD != null && usuarioBD.getPass().equals(usuario.getPass())) {
             if(usuarioBD.getTipoUsuario().getId() == 1){
                 redirectAttributes.addFlashAttribute("usuarioSesion", usuarioBD);
@@ -54,11 +54,7 @@ public class ControladorUsuario {
             return "redirect:/";    
     }
     
-    @GetMapping("/gestionAdministrador")
-    public String mostrarPanelInicioAdministrador(@ModelAttribute("usuarioSesion") Usuario usuario, Model modelo) {
-        modelo.addAttribute("administrador", usuario);
-        return "Administrador/administrador";
-    }
+    
     
 
 }

@@ -14,19 +14,16 @@
         <img src="IMG/logoCelulosa.jpg" alt="logoCelulosa">
       </div>      
     </div>
-    <!--<div class = imagenDeFondo>
-      <img src="IMG/LissEditado.jpg" alt="fondo">
-    </div>-->
     <div>
     <form class = "login" th:action="@{/login}" th:object="${user}" method="post">
         <p>Digite sus datos</p>
         <div class="mb-3">
           <label for="user" class="form-label">Usuario</label>
-          <input type="text" class="form-control" id="user" aria-describedby="emailHelp" th:field:"*{nombreUsuario}" placeholder="Ingrese su usuario">
+          <input type="text" class="form-control" id="user" th:field="*{nombreUsuario}" placeholder="Ingrese su usuario">
         </div>
         <div class="mb-3">
           <label for="pass" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="pass" th:field:"*{pass}" placeholder="Ingrese su contraseña">
+          <input type="password" class="form-control" id="pass" th:field="*{pass}" placeholder="Ingrese su contraseña">
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Ingresar</button>
