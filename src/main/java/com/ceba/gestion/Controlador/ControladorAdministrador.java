@@ -11,5 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ControladorAdministrador {
     
-    
+    @GetMapping("/gestionAdministrador")
+    public String mostrarPanelInicioAdministrador(@ModelAttribute("usuarioSesion") Usuario usuario, Model modelo) {
+        modelo.addAttribute("administrador", usuario);
+        return "Administrador/administrador";
+    }
 }
