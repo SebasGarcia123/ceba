@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
@@ -30,8 +31,6 @@ public class ControladorUsuario {
     @PostMapping("/login")
     public String validarUsuario(@ModelAttribute("user") Usuario usuario, Model modelo, RedirectAttributes redirectAttributes){
         Usuario usuarioBD = servicio.obtenerUsuarioPorNombreUsuario(usuario.getNombreUsuario());
-        System.out.println(usuario.toString());
-        System.out.println(usuario.toString());
         if (usuarioBD != null && usuarioBD.getPass().equals(usuario.getPass())) {
             if(usuarioBD.getTipoUsuario().getId() == 1){
                 redirectAttributes.addFlashAttribute("usuarioSesion", usuarioBD);
@@ -55,6 +54,10 @@ public class ControladorUsuario {
     }
     
     
-    
+     @GetMapping("/logout")
+    public String logout(SessionStatus status) {
+        status.setComplete();
+        return "redirect:/";
+    }
 
 }
