@@ -35,111 +35,45 @@ body{
     display: inline-block;
 }
 
-/* Estilo del contenedor del botón */
-.dropdown {
-    position:relative;
-    display:contents;
-    margin-left: -20px;
+.menu{
+    background-color: black;
+    height: 50px;
 }
 
-/* Botón principal */
-.dropdown button {
-    background-color: #f3841c;
+.menu ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    display: inline-block;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.menu ul li a{
+    text-decoration: none;
     color: white;
-    max-width: 350px;
-    min-width: 160px;
-    padding: 20px 20px;
-    cursor: pointer;
-    font-size: 25px;
-    border: solid #131212 1px;
-    font-family: "Crimson Text", serif;
-    font-weight: 400;
-    font-size: 25px;
-    font-style: normal;
-    
+    font-weight: bolder;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.dropdown-menu {
+.dropdown-menu{
     display: none;
-    background-color: #FF7900;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    background-color: black;
+    color: azure;
+    width: 150px;
     z-index: 1;
 }
 
-.dropdown-menu a {
-    color: black;
-    padding: 10px 8px;
-    text-decoration: none;
-    display: block;
-    border: solid 1px #131212;
-    background-color: #FF7900;
-    cursor: pointer;
-    font-family: "Crimson Text", serif;
-    font-weight: 400;
-    font-style: normal;
+.nav-link.dropdown-toggle {
+    color: #fff; /* Establecer el color blanco (o el color que prefieras) para el enlace */
 }
 
-
-/* Mostrar el menú al pasar el ratón sobre el contenedor */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Cambiar el color del botón al pasar el ratón */
-.dropdown:hover button {
-    background-color: #131212;
-    color: #FF7900;
-    
-}
-
-/*.nuevo {
-    background-color: #ff7d00;
-    color: white;
-    max-width: 350px;
-    min-width: 160px;
-    padding: 20px 20px;
-    cursor: pointer;
-    font-size: 25px;
-    border: solid #131212 1px;
-    text-decoration: none;
-    display: inline-block;
-    text-shadow: 2px 2px 0.5px gray;
-}*/
-
-.navBar{
-    background-color: rgba(15, 14, 14, 0.6);
-    height: 81px;
-    border: solid 1px black;
-}
-
-.navBar li{
-    list-style: none;
-    display: flex;
-    float: left;
-}
-
-.navBar ul{
-    margin: 0px;
-}
-
-.finDeNav{
-    float: inline-end;
-    background-color: #FF7900;
-    width: 200px;
-    height: 80px;
-    border: 1px solid black;
-    color: white;
-    cursor: pointer;
-    font-size: 25px;
-    text-shadow: 2px 2px 0.5px gray;
-    text-decoration: none;
-    padding: 20px 25px;
-    text-align: center;
-    font-family: "Crimson Text", serif;
-    font-weight: 400;
-    font-size: 25px;
-    font-style: normal;
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Mostrar el menú al pasar el cursor */
 }
 
 .identidad {
