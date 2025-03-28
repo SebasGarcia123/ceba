@@ -47,11 +47,19 @@ body{
     background-color: transparent;
     display: inline-block;
     padding: 10px;
-    width: 150px;
+    width: 160px;
     text-align: center;
 }
 
 .menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu ul li a :hover{
     text-decoration: none;
     color: white;
     font-weight: bolder;
@@ -64,7 +72,7 @@ body{
     position: absolute;
     background-color: black;
     color: azure;
-    width: 150px;
+    width: 160px;
     z-index: 1;
 }
 
@@ -81,4 +89,23 @@ body{
     font-size: 25px;
     padding: 30px;
     text-shadow: 2px 2px 0.5px gray;
+}
+
+.formulario{
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px; 
+}
+
+.botonEnviar{
+    background-color: #0f0f0f;
+    color: white;
+    border-radius: 3px;
+    border: solid 1px black;
+    font-family: sans-serif;
+    margin: 15px;
 }

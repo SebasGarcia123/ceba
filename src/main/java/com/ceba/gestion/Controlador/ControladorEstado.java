@@ -27,14 +27,14 @@ public class ControladorEstado {
     @GetMapping("/listarABM_estado")
     public String listarLosEstados(@ModelAttribute("usuarioSesion") Usuario usuario, Model modelo) {
         modelo.addAttribute("estados", servicio.listarLosEstados());
-        return "Administrador/ABM/estado/ABM_estado";
+        return "Administrador/ABM/Estado/ABM_estado";
     }
 
     @GetMapping("/nuevoEstado")
     public String nuevoEstadoFormulario(@ModelAttribute("usuarioSesion") Usuario usuario, Model modelo, @ModelAttribute("mensaje") String mensaje) {
         Estado estado = new Estado();
         modelo.addAttribute("estado", estado);
-        return "Administrador/ABM/estado/nuevo_estado";
+        return "Administrador/ABM/Estado/nuevo_estado";
     }
 
     @PostMapping("/guardarEstado")
@@ -56,7 +56,7 @@ public class ControladorEstado {
         String nombreAnterior = estado.getNombreEstado();
         modelo.addAttribute("estado", estado);
         modelo.addAttribute("nombreAnterior", nombreAnterior);
-        return "Administrador/ABM/estado/modificar_estado";
+        return "Administrador/ABM/Estado/modificar_estado";
     }
 
     @PostMapping("/actualizarEstado/{id}")

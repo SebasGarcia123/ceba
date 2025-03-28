@@ -17,19 +17,24 @@
         </div>
       </div>
     </div>
-
-    <div class="navBar">
-          <li>
-              <div>
-                <a href="/nuevoEstado" class="nuevo">Nuevo Estado</a>
-              </div>
-            </li>
-                  <div>
-                      <a th:href="@{/gestionAdministrador}" class="finDeNav">Volver</a>
-                  </div>
-          
-      </div>
+    <!--Navbar-->
+    <nav class="menu">
+    <div>
+      <ul>
+        <li>
+          <a th:href="@{/nuevoEstado}">
+            Nuevo Estado
+          </a>
+        </li>
+        <li>
+            <a th:href="@{/gestionAdministrador}">Volver</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+    <!--Tabla-->
     <div class = "container">
+        <br/>
         <div class = "row">
             <h2>Lista de estados disponibles</h2>
         </div>
