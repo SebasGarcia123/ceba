@@ -11,29 +11,39 @@ import java.util.List;
 @Entity
 @Table(name = "producto")
 public class Producto {
-    
+
     @Id
     @Column(name = "id_producto")
     private Long idProducto;
-    
+
+    private String codigoProducto;
     private String descripcion;
     private int bolsonesPorPallet;
-    
+    private Double pesoPorBolson;
+
     @ManyToMany(mappedBy = "productos")
     private List<Pedido> pedidos;
 
-    public Producto() {
-    }
-
-    public Producto(String descripcion, int bolsonesPorPallet) {
-        this.descripcion = descripcion;
-        this.bolsonesPorPallet = bolsonesPorPallet;
-    }
-
-    public Producto(Long idProducto, String descripcion, int bolsonesPorPallet) {
+    public Producto(Long idProducto, String codigoProducto, String descripcion, int bolsonesPorPallet,
+            Double pesoPorBolson, List<Pedido> pedidos) {
         this.idProducto = idProducto;
+        this.codigoProducto = codigoProducto;
         this.descripcion = descripcion;
         this.bolsonesPorPallet = bolsonesPorPallet;
+        this.pesoPorBolson = pesoPorBolson;
+        this.pedidos = pedidos;
+    }
+
+    public Producto(String codigoProducto, String descripcion, int bolsonesPorPallet, Double pesoPorBolson,
+            List<Pedido> pedidos) {
+        this.codigoProducto = codigoProducto;
+        this.descripcion = descripcion;
+        this.bolsonesPorPallet = bolsonesPorPallet;
+        this.pesoPorBolson = pesoPorBolson;
+        this.pedidos = pedidos;
+    }
+
+    public Producto() {
     }
 
     public Long getIdProducto() {
@@ -42,6 +52,14 @@ public class Producto {
 
     public void setIdProducto(Long idProducto) {
         this.idProducto = idProducto;
+    }
+
+    public String getCodigoProducto() {
+        return codigoProducto;
+    }
+
+    public void setCodigoProducto(String codigoProducto) {
+        this.codigoProducto = codigoProducto;
     }
 
     public String getDescripcion() {
@@ -60,6 +78,14 @@ public class Producto {
         this.bolsonesPorPallet = bolsonesPorPallet;
     }
 
+    public Double getPesoPorBolson() {
+        return pesoPorBolson;
+    }
+
+    public void setPesoPorBolson(Double pesoPorBolson) {
+        this.pesoPorBolson = pesoPorBolson;
+    }
+
     public List<Pedido> getPedidos() {
         return pedidos;
     }
@@ -67,6 +93,5 @@ public class Producto {
     public void setPedidos(List<Pedido> pedidos) {
         this.pedidos = pedidos;
     }
-    
-    
+
 }

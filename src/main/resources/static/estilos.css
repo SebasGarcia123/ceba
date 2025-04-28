@@ -37,10 +37,14 @@ body{
 
 .menu{
     background-color: black;
-    height: 50px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .menu ul li{
+    height: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -52,6 +56,13 @@ body{
 }
 
 .menu ul li a{
+    display: inline-block;
+    height: 100%;
+    line-height: normal;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: white;
     font-weight: bolder;
@@ -76,12 +87,12 @@ body{
     z-index: 1;
 }
 
-.nav-link.dropdown-toggle {
-    color: #fff; /* Establecer el color blanco (o el color que prefieras) para el enlace */
+.nav-link:hover {
+    color: #fff;
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
-    display: block; /* Mostrar el menú al pasar el cursor */
+    display: block;
 }
 
 .identidad {
